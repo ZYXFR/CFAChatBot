@@ -1,7 +1,3 @@
-# Project Name
-
-Welcome to the Project Name repository! This project uses Streamlit to run a web application. Follow the instructions below to get started.
-
 ## Getting Started
 
 ### 1. Running the Application
