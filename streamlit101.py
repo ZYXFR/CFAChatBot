@@ -5,7 +5,7 @@ import torch
 import time
 
 DEVICE: str = "cuda"
-MODEL_NAME: str = "/disk2/elvys/Mistral-7B-Instruct-v0.2"
+MODEL_NAME: str = "your_model"
 
 class LLM:
     def __init__(self) -> None:
