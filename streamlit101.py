@@ -5,7 +5,6 @@ import torch
 import time
 
 DEVICE: str = "cuda"
-# MODEL_NAME: str = "mistralai/Mistral-7B-Instruct-v0.2"
 MODEL_NAME: str = "/disk2/elvys/Mistral-7B-Instruct-v0.2"
 
 class LLM:
