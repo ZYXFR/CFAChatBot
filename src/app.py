@@ -1,76 +1,62 @@
 import streamlit as st
-import time
-import pandas as pd
-from .llm import LLM,generate_answer, generate_tts
-from .prompts import get_markdown_prompt, get_translation_prompt
-from .prompts.fundamental_prompt import get_fundation_prompt
-from .prompts.general_prompt import get_general_prompt
-from .constants import JSON_RESPONSE_SCHEMA, OUTPUT_FORMAT, TARGET_LANGUAGES
-from .utils import convert_str_to_markdown, save_data, stream_data
 
+def generate_response(prompt, language="English", format_type="Text"):
+    """
+    模拟生成响应，实际逻辑可替换为调用 LLM API。
+    """
+    # 模拟返回数据
+    if language != "English":
+        return f"Translated ({language}): {prompt}"
+    if format_type == "Markdown":
+        return f"**Markdown Format:** {prompt}"
+    return f"Response: {prompt}"
 
 def run():
     st.set_page_config(layout="wide")
-    st.title("📊📈CFA France Scociety Chatbot")
+    st.title("📊📈CFA France Society Chatbot")
 
-    # Store the initial value of widgets in session state
-    if "disabled" not in st.session_state:
-        st.session_state.disabled = False
+    # 初始化 Session State
+    if "messages" not in st.session_state:
         st.session_state.messages = []
 
     with st.sidebar:
-        st.title("📊📈CFA France Scociety Chatbot")
-        llm_type: str = "openai/gpt-4o-mini-2024-07-18"
-        assistant_type: str = st.selectbox(
-            "Select assistant type:",
-            ["AI Analyzer"],
-            index=0,
-            disabled=st.session_state.disabled,
+        st.title("📊📈 Chatbot Settings")
+        # 设置 Prompt 类型
+        prompt_type = st.selectbox(
+            "Select Prompt Type:", 
+            ["General questions", "Financial questions"], 
+            index=0
         )
-        analyzer_type: str = st.selectbox(
-            "Select data:",
-            ["General questions", "Fundation questions"],
-            index=0,
-            disabled=st.session_state.disabled,
+        # 选择语言
+        language = st.selectbox(
+            "Select Target Language:", 
+            ["English", "French", "Spanish", "Chinese"], 
+            index=0
         )
-        language: str = st.selectbox(
-            "Target language:",
-            list(TARGET_LANGUAGES.keys()),
-            index=0,
-            disabled=st.session_state.disabled,
+        # 输出格式
+        output_format = st.selectbox(
+            "Select Output Format:", 
+            ["Text", "Markdown"], 
+            index=0
         )
-        output_format: str = st.selectbox(
-            "Output format:",
-            OUTPUT_FORMAT,
-            index=0,
-            disabled=st.session_state.disabled,
-        )
-        button = st.button("Generate AI analysis", disabled=st.session_state.disabled)
-    if button and assistant_type == "AI Analyzer":
-        if analyzer_type == "General questions":
-            prompt = get_general_prompt()
-        elif analyzer_type == "Funancial questions":
-            prompt = get_fundation_prompt()
-        print(prompt)
-        answer = generate_answer(
-            prompt,
-            llm_type,
-            response_format="json_object",
-            json_schema=JSON_RESPONSE_SCHEMA[analyzer_type],
-        )
-        if language != "English":
-            prompt = get_translation_prompt(answer, language, analyzer_type)
-            answer = generate_answer(
-                prompt,
-                llm_type,
-                response_format="json_object",
-                json_schema=JSON_RESPONSE_SCHEMA[analyzer_type],
-            )
-        if output_format == "markdown":
-            prompt = get_markdown_prompt(answer)
-            answer = convert_str_to_markdown(
-                generate_answer(
-                    prompt, llm_type, response_format="markdown", json_schema=""
-                )
-            )
-        st.write_stream(stream_data(answer))
+        # 按钮触发
+        generate_button = st.button("Generate AI Analysis")
+
+    # 主界面逻辑
+    if generate_button:
+        # 根据 Prompt 类型生成 Prompt
+        if prompt_type == "General questions":
+            prompt = "This is a general question prompt. Please modify as needed."
+        elif prompt_type == "Financial questions":
+            prompt = "This is a financial question prompt. Please modify as needed."
+
+        # 生成 AI 响应
+        response = generate_response(prompt, language, output_format)
+
+        # 显示结果
+        st.session_state.messages.append(response)
+        for msg in st.session_state.messages:
+            st.write(msg)
+
+if __name__ == "__main__":
+    run()

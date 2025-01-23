@@ -29,40 +29,37 @@ Imagine you are a helpful and knowledgeable CFA expert. Your mission is to assis
 
 """
 
-# Example data for generating the prompt
+# Example data for generating the prompt (now in plain text format)
 EXAMPLE_OUTPUT: str = """
-{
-    "title": "Everything You Need to Know About the CFA Exam Format",
-    "introduction": "The CFA program is a globally recognized credential that requires passing three levels of rigorous exams. Here’s what you need to know about the exam format.",
-    "details": {
-        "exam_structure": "<ul>"
-                          "<li><strong>Level I:</strong> Focuses on basic knowledge and understanding. It has two sessions of 135 minutes each with multiple-choice questions.</li>"
-                          "<li><strong>Level II:</strong> Emphasizes application and analysis. It includes vignettes (case studies) with item set questions.</li>"
-                          "<li><strong>Level III:</strong> Focuses on portfolio management and wealth planning. It includes a combination of item set and essay questions.</li>"
-                          "</ul>",
-        "exam_schedule": "<ul>"
-                         "<li>The exams are conducted multiple times a year for Level I, and twice a year for Levels II and III.</li>"
-                         "<li>It’s important to register early and plan ahead to secure a convenient exam date.</li>"
-                         "</ul>",
-        "certification_process": "<ul>"
-                                 "<li>After passing all three levels, candidates must gain 4,000 hours of relevant work experience and submit references to earn the CFA charter.</li>"
-                                 "<li>The certification process emphasizes ethical and professional standards.</li>"
-                                 "</ul>"
-    },
-    "practical_tips": "Start early and plan your study schedule meticulously. Use the CFA Institute's Learning Ecosystem for official materials and practice exams.",
-    "related_questions": {
-        "questions": [
-            "What are the main topics covered in the CFA curriculum?",
-            "How can I effectively prepare for the Level I CFA exam?",
-            "What are the benefits of earning the CFA designation?"
-        ],
-        "answers": [
-            "The CFA curriculum covers ten key topics, including ethics, financial reporting, quantitative methods, and portfolio management.",
-            "Effective preparation includes creating a study plan, focusing on weak areas, and practicing with mock exams.",
-            "The CFA designation enhances career opportunities in finance, particularly in investment management and portfolio analysis."
-        ]
-    }
-}
+Title: Everything You Need to Know About the CFA Exam Format
+
+Introduction:
+The CFA program is a globally recognized credential that requires passing three levels of rigorous exams. Here’s what you need to know about the exam format.
+
+Details:
+- Exam Structure:
+  - Level I: Focuses on basic knowledge and understanding. It has two sessions of 135 minutes each with multiple-choice questions.
+  - Level II: Emphasizes application and analysis. It includes vignettes (case studies) with item set questions.
+  - Level III: Focuses on portfolio management and wealth planning. It includes a combination of item set and essay questions.
+
+- Exam Schedule:
+  - The exams are conducted multiple times a year for Level I, and twice a year for Levels II and III.
+  - It’s important to register early and plan ahead to secure a convenient exam date.
+
+- Certification Process:
+  - After passing all three levels, candidates must gain 4,000 hours of relevant work experience and submit references to earn the CFA charter.
+  - The certification process emphasizes ethical and professional standards.
+
+Practical Tips:
+Start early and plan your study schedule meticulously. Use the CFA Institute's Learning Ecosystem for official materials and practice exams.
+
+Related Questions:
+1. What are the main topics covered in the CFA curriculum?
+   - The CFA curriculum covers ten key topics, including ethics, financial reporting, quantitative methods, and portfolio management.
+2. How can I effectively prepare for the Level I CFA exam?
+   - Effective preparation includes creating a study plan, focusing on weak areas, and practicing with mock exams.
+3. What are the benefits of earning the CFA designation?
+   - The CFA designation enhances career opportunities in finance, particularly in investment management and portfolio analysis.
 """
 
 def get_general_prompt(question: str, assistant_type: str = "CFA Expert") -> str:
@@ -81,3 +78,4 @@ def get_general_prompt(question: str, assistant_type: str = "CFA Expert") -> str
     )
     full_prompt = f"{prompt}\n--- User Question ---\n{question}\n--- Example Response ---\n{EXAMPLE_OUTPUT}"
     return full_prompt
+
