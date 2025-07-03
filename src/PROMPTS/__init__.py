@@ -8,7 +8,7 @@ from .cfa_events_prompt import get_cfa_events_prompt
 # Define a dictionary of Prompts
 PROMPTS = {
     "General Questions": get_general_prompt,
-    "Fundation Questions": get_fundation_prompt,
+    "Foundation Questions": get_fundation_prompt,
     "CFA France Events": get_cfa_events_prompt,
 }
 

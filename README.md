@@ -1,112 +1,72 @@
 # CFA Chatbot Application
 
-## Getting Started
+## 🧠 Overview
 
-This application is designed to help users explore CFA-related topics, including exam details, foundational knowledge, and CFA France events, using OpenAI’s GPT model.
+This AI-powered chatbot helps users explore CFA-related topics, including:
 
-### Prerequisites
+- 📚 Exam content and curriculum details
+- 🏛️ Foundational knowledge (finance, ethics, economics)
+- 📅 CFA France events and announcements
 
-1. **Install Python**: Ensure you have Python 3.9 or higher installed on your machine.
-2. **Install Virtual Environment Tools**: Use `venv` or another virtual environment manager like `virtualenv`.
+Built using **OpenAI GPT**, **Streamlit**, and modular Python code.
 
 ---
 
-### 1. Setting Up the Environment
+## 🛠️ Prerequisites
 
-#### Step 1: Clone the Repository
+Before running the app, make sure you have:
 
-Clone this repository to your local machine:
+- ✅ Python 3.9 or higher
+- ✅ `pip` package manager
+- ✅ Virtual environment tool (`venv`, `virtualenv`, or `conda`)
+- ✅ OpenAI API Key (get one at [OpenAI](https://platform.openai.com/signup))
+
+---
+
+## ⚙️ 1. Set Up Environment
+
+### Step 1: Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ZYXFR/CFAChatBot.git
 cd CFAChatBot
 ```
 
-Step 2: Create a Virtual Environment
+## ⚙️ 2: Create and Activate Virtual Environment
 
-Create a virtual environment to isolate dependencies:
+# Create
 
-</code></div></div></pre>
+python3 -m venv venv
 
-Activate the virtual environment:
+# Activate (macOS/Linux)
 
-* On Linux/macOS:
-  </code></div></div></pre>
-* On Windows:
-  </code></div></div></pre>
+source venv/bin/activate
 
-#### Step 3: Install Required Packages
+# Activate (Windows)
 
-Install all dependencies specified in `requirements.txt`:
+venv\Scripts\activate
 
-</code></div></div></pre>
+## ⚙️ 3: Install Dependencies
 
----
+pip install -r requirements.txt
 
-### 2. Configuring the Environment
+## ⚙️ 4: Run application
 
-#### Step 1: Set Up OpenAI API Key
+streamlit run main.py
+http://localhost:8501
 
-Create a `.env` file in the project’s root directory and add your OpenAI API key:
+## ⚙️ 5: Project Structure
 
-</code></div></div></pre>
-
-> **Note**: Replace `your_openai_api_key_here` with your actual OpenAI API key. If you don’t have an API key, sign up at [OpenAI](https://platform.openai.com/signup/).
-
----
-
-### 3. Running the Application
-
-Run the application using Streamlit:
-
-</code></div></div></pre>
-
-After running the command, the application will be accessible in your browser at:
-
-</code></div></div></pre>
-
----
-
-### Example Workflow
-
-1. Open the application in your browser.
-2. Select the type of question you want to ask from the sidebar (e.g., Exam Details, Foundational Knowledge, or CFA France Events).
-3. Enter your question in the input box and click "Submit."
-4. View the generated response and explore related questions.
-
----
-
-### 4. Deactivating the Virtual Environment
-
-Once done, deactivate the virtual environment:
-
-</code></div></div></pre>
-
----
-
-### Troubleshooting
-
-1. **Error: Missing Dependencies**
-   Ensure all dependencies are installed by running:
-   </code></div></div></pre>
-2. **Error: Missing OpenAI API Key**
-   Make sure your `.env` file contains the correct `OPENAI_API_KEY`.
-3. **Streamlit Not Found**
-   Ensure the virtual environment is activated and dependencies are installed.
-
----
-
-### 5. File Structure
-
-├── main.py                 # Entry point for the application
+CFAChatBot/
+├── main.py                # Streamlit app entry point
+├── requirements.txt       # Dependency list
+├── .env                   # API key (not committed)
+├── .env.example           # Example env file format
 ├── src/
-│   ├── PROMPTS/            # Prompt definitions
-│   └── utils/              # Utility scripts
-├── requirements.txt        # Dependency list
-├── README.md               # Project documentation
-├── .env                    # Environment variables
-└── venv/                   # Virtual environment (generated locally)</code></div></div></pre>
+│   ├── PROMPTS/           # Prompt engineering files
+│   └── utils/             # Helper functions
+└── venv/                  # Local Python virtual environment
 
-```
 
-```
+
+
