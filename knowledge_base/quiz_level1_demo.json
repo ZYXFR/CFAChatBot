@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "title": "CFA Level I — demo set (illustrative only)",
+  "questions": [
+    {
+      "id": "l1-eth-001",
+      "level": "I",
+      "topic": "Ethical and Professional Standards",
+      "stem": "Which standard most directly requires placing client interests ahead of personal interests?",
+      "choices": [
+        "Loyalty, prudence, and care",
+        "Fair dealing",
+        "Independence and objectivity",
+        "Misconduct"
+      ],
+      "correct_index": 0,
+      "explanation": "Duty to clients includes acting with loyalty, prudence, and care—typically framed as placing client interests first. Always confirm wording with the current CFA Institute Code and Standards."
+    },
+    {
+      "id": "l1-tvm-001",
+      "level": "I",
+      "topic": "Quantitative Methods",
+      "stem": "If annual compounding applies, the future value of a lump sum increases when which of the following increases?",
+      "choices": [
+        "Discount rate only",
+        "Time horizon or stated interest rate",
+        "Number of periods only, with rate held constant at zero",
+        "None of the above"
+      ],
+      "correct_index": 1,
+      "explanation": "Future value grows with a higher interest rate and/or more compounding periods (longer horizon), other things equal."
+    },
+    {
+      "id": "l1-fra-001",
+      "level": "I",
+      "topic": "Financial Statement Analysis",
+      "stem": "Which statement is true about the balance sheet?",
+      "choices": [
+        "It summarizes performance over a period",
+        "It presents assets, liabilities, and equity at a point in time",
+        "It is identical to the statement of cash flows",
+        "It excludes contributed capital"
+      ],
+      "correct_index": 1,
+      "explanation": "The balance sheet is a snapshot at a specific date: assets = liabilities + equity."
+    },
+    {
+      "id": "l1-corp-001",
+      "level": "I",
+      "topic": "Corporate Issuers",
+      "stem": "The weighted average cost of capital (WACC) is generally used to:",
+      "choices": [
+        "Measure operating leverage only",
+        "Discount expected future cash flows in a firm valuation context",
+        "Compute dividend payout ratio only",
+        "Replace the risk-free rate in all models"
+      ],
+      "correct_index": 1,
+      "explanation": "WACC is a common hurdle or discount rate reflecting blended costs of debt and equity financing."
+    },
+    {
+      "id": "l1-eq-001",
+      "level": "I",
+      "topic": "Equity Investments",
+      "stem": "In a competitive market with rational investors, prices most often reflect:",
+      "choices": [
+        "Only historical book value",
+        "Public information in semi-strong form efficiency",
+        "Insider information for all participants",
+        "Fixed par value regardless of news"
+      ],
+      "correct_index": 1,
+      "explanation": "Semi-strong efficiency implies prices reflect all publicly available information."
+    },
+    {
+      "id": "l1-fi-001",
+      "level": "I",
+      "topic": "Fixed Income",
+      "stem": "When market yields rise, the price of an option-free conventional bond typically:",
+      "choices": [
+        "Rises",
+        "Falls",
+        "Is unchanged",
+        "Moves independently of yield"
+      ],
+      "correct_index": 1,
+      "explanation": "Bond prices and yields move inversely for fixed cash flows."
+    },
+    {
+      "id": "l1-deriv-001",
+      "level": "I",
+      "topic": "Derivatives",
+      "stem": "A forward contract differs from a futures contract primarily in that forwards are often:",
+      "choices": [
+        "Standardized and exchange-traded",
+        "Customized OTC agreements",
+        "Always cash-settled only",
+        "Free of counterparty risk"
+      ],
+      "correct_index": 1,
+      "explanation": "Forwards are typically bilateral OTC contracts with terms customized between parties."
+    },
+    {
+      "id": "l1-pm-001",
+      "level": "I",
+      "topic": "Portfolio Management",
+      "stem": "Diversification across uncorrelated assets primarily aims to:",
+      "choices": [
+        "Eliminate all risk",
+        "Reduce unsystematic (idiosyncratic) risk",
+        "Guarantee positive returns",
+        "Remove market beta"
+      ],
+      "correct_index": 1,
+      "explanation": "Diversification reduces asset-specific risk; market risk remains."
+    }
+  ]
+}

@@ -65,6 +65,10 @@ Record:
 python -m pip install -r requirements.txt
 ```
 
+Important:
+- After pulling new code, always run this command again.
+- If a new package is added (example: `pypdf` for PDF RAG), the app may fail until dependencies are reinstalled.
+
 Record:
 - Install finished: yes/no
 - Errors (if any):
