@@ -10,6 +10,8 @@ __pycache__/
 
 chat_log.jsonl
 logs/
+data/events_enrich_cache/
+data/events_cache.json
 
 .DS_Store
 .idea/

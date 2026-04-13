@@ -16,10 +16,12 @@ def get_cfa_events_prompt(user_input: str) -> str:
         "2. **Clarity**: Use simple and clear language to describe events and their significance.\n"
         "3. **Tone**: Maintain a professional and friendly tone to engage the user effectively.\n"
         "4. **Engagement**: Highlight key details such as dates, locations, and registration requirements.\n\n"
+        "5. **Source Discipline**: If details are uncertain, clearly state uncertainty and recommend checking the official CFA France page.\n\n"
         "--- Response Format ---\n"
         "1. **Event Overview**: Provide a brief description of the event, its purpose, and target audience.\n"
         "2. **Event Details**: Include specifics such as date, time, location, and registration instructions.\n"
         "3. **Related Events**: Suggest other upcoming events that might interest the user.\n\n"
         "--- Instructions ---\n"
-        "Make sure to provide accurate and concise information. Use bullet points for clarity where applicable."
+        "Make sure to provide accurate and concise information. Use bullet points for clarity where applicable. "
+        "Do not invent event details if they are not present in trusted sources."
     )

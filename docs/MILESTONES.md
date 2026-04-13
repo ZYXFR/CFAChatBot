@@ -48,6 +48,12 @@ Gate checks:
 - [ ] Fallback behavior is clear when no source found
 - [ ] Multi-turn context works in one session
 
+M1 execution status (in progress):
+- [x] Local knowledge base folder created (`knowledge_base/`)
+- [x] Basic retrieval pipeline wired to `main.py`
+- [x] Retrieved source names are shown in chat history
+- [ ] Manual QA with 10 sample questions
+
 ## M2 - Official Events Sync
 
 Goal: Show latest CFA France activities from official sources.
@@ -58,15 +64,28 @@ Gate checks:
 - [ ] UI shows latest events and last sync time
 - [ ] Query like "latest events" returns grounded results
 
+M2 execution status (in progress):
+- [x] Implemented CFA France homepage fetch + parser (`src/events_sync.py`)
+- [x] Added local cache storage (`data/events_cache.json`)
+- [x] Connected Events Hub UI with refresh button and sync timestamp
+- [x] Event-grounded Q&A path for event-style queries (uses official feed + localized display)
+- [x] UI languages (EN/FR/ZH) + LLM localize/enrich events (speaker + highlights)
+
 ## M3 - Quiz and Practice
 
 Goal: Provide a basic mock test flow for learning.
 
-Gate checks:
-- [ ] Load question set
-- [ ] User can submit answers
-- [ ] Score and explanations are shown
-- [ ] Wrong answers are captured for review
+Gate checks (MVP):
+- [x] Load question set
+- [x] User can submit answers
+- [x] Score and explanations are shown
+- [x] Wrong answers are captured for review
+
+M3 execution status (MVP done):
+- [x] Demo question set JSON (`knowledge_base/quiz_level1_demo.json`)
+- [x] Loader + grader (`src/quiz.py`)
+- [x] Quiz Lab tab: form, submit, score, per-item explanation (EN/FR/ZH UI labels)
+- [x] Reset clears answers and last result
 
 ## M4 - Fancy UI and Storytelling
 
