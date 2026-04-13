@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.so
+
+.env
+.env.local
+.env.backup
+
+chat_log.jsonl
+logs/
+
+.DS_Store
+.idea/
+.vscode/

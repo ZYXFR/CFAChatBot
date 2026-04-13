@@ -6,7 +6,7 @@ from typing import Generator
 
 import nltk
 
-nltk.download("punkt_tab")
+nltk.download("punkt", quiet=True)
 
 
 def load_assets() -> dict:
