@@ -23,37 +23,86 @@ Before running the app, make sure you have:
 
 ---
 
-## ⚙️ 1. Set Up Environment
+## ⚙️ Setup and Run
 
-### Step 1: Clone the Repository
+### 1) Clone the repository
 
 ```bash
 git clone https://github.com/ZYXFR/CFAChatBot.git
 cd CFAChatBot
 ```
 
-## ⚙️ 2: Create and Activate Virtual Environment
+### 2) Create a virtual environment (first time only)
 
-# Create
-
+```bash
 python3 -m venv venv
+```
 
-# Activate (macOS/Linux)
+This creates one local environment folder named `venv`.
 
+### 3) Activate the virtual environment
+
+**macOS/Linux**
+
+```bash
 source venv/bin/activate
+```
 
-# Activate (Windows)
+**Windows (PowerShell)**
 
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+**Windows (cmd)**
+
+```cmd
 venv\Scripts\activate
+```
 
-## ⚙️ 3: Install Dependencies
+### 4) Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-## ⚙️ 4: Run application
+### 5) Run the app
 
+```bash
 streamlit run main.py
-http://localhost:8501
+```
+
+Open:
+
+`http://localhost:8501`
+
+---
+
+## 🔁 Starting the app again later
+
+You do **not** need to create a new virtual environment every time.
+
+When you restart your computer or open a new terminal, run:
+
+```bash
+cd CFAChatBot
+source venv/bin/activate
+streamlit run main.py
+```
+
+---
+
+## ❓Do I need to recreate `venv`?
+
+Usually, **no**.
+
+Recreate `venv` only if:
+
+- the `venv` folder was deleted
+- you changed Python major/minor version
+- the environment is broken and packages cannot be imported
+
+If `venv` exists, running `python3 -m venv venv` targets the same folder (`venv`), not a new random one.
 
 ## ⚙️ 5: Project Structure
 
